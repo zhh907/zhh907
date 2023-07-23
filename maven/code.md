@@ -1,4 +1,4 @@
-# POM
+# POM.XML
 ```
 <project xmlns = "http://maven.apache.org/POM/4.0.0"
     xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
@@ -47,7 +47,14 @@ mvn help:effective-pom
         <url>http://download.companyname.org/maven2/lib2</url>
     </repository>
 </repositories>
+```
 
+# 构建一个java项目
+```
+mvn archetype:generate "-DgroupId=com.companyname.bank" "-DartifactId=consumerBanking" "-DarchetypeArtifactId=maven-archetype-quickstart" "-DinteractiveMode=false"
+```
 
-
+# 强制下载最新的快照版本
+```
+mvn clean package -U
 ```
