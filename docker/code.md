@@ -65,7 +65,7 @@ yum install -y docker-engine
 ```
 # 拉取镜像
 docker pull mysql:5.7
-
+ 
 # 创建挂载文件路径
 # 宿主机创建数据存放目录映射到容器
 mkdir -p /usr/local/docker_data/mysql/data
@@ -80,5 +80,7 @@ mkdir -p /usr/local/docker_data/mysql/logs
 # --privileged=true参数，让容器拥有真正的root权限
 docker run --privileged=true --name mysql5.7 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d  -v /usr/local/docker_data/mysql/data:/var/lib/mysql -v /usr/local/docker_data/mysql/conf:/etc/mysql/ -v /usr/local/docker_data/mysql/logs:/var/log/mysql mysql:5.7
 
+# 进入容器
+docker exec -it mysql5.7 bash
 
 ```
