@@ -25,7 +25,7 @@ mvn help:effective-pom
 
 # maven 配置 setting.xml
 ```
-# maven查找依赖路径【本地仓库-中央仓库-远程仓库】
+# maven查找依赖路径【本地仓库-远程仓库-中央仓库】
 # 本地仓库 
 <localRepository>C:/MyLocalRepository</localRepository>
 # 中央仓库（无需配置）http://search.maven.org/#browse
