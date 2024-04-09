@@ -29,6 +29,10 @@ sudo yum remove docker*
 #删除目录
 rm -rf /var/lib/docker/
 
+# 安装工具，设计docker仓库源
+ yum install -y yum-utils  device-mapper-persistent-data  lvm2
+ yum-config-manager  --add-repo  https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
 # 安装
 yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
